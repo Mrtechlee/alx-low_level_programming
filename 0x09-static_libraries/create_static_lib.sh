@@ -1,9 +1,9 @@
 #!/bin/bash
-gcc -c *.c
-ar -rc libholberton.a *.o
-ranlib libholberton.a
-ar -t libholberton.a
-nm lib_test.a
-gcc main.c -L. -lholberton -o main
-./main
 
+# a script that creates a static library
+# called liball.a from all the .c files
+# that are in the current directory
+
+gcc -c *.c
+ar rc liball.a *.o
+echo y | rm -I *.o
